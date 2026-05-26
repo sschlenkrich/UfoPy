@@ -1,0 +1,23 @@
+[project]
+name = "UfoPy_sschlenkrich"
+version = "0.0.1"
+authors = [
+  { name="Sebastian Schlenkrich", email="sebastian.schlenkrich@frame-consult.de" },
+]
+description = "Example package to test Python packaging and documentation"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/sschlenkrich/UfoPy"
+Issues = "https://github.com/sschlenkrich/UfoPy/issues"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
