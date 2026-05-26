@@ -28,3 +28,6 @@ build-backend = "hatchling.build"
 
 [tool.hatch.version]
 path = "src/UfoPy/__about__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/UfoPy"]
