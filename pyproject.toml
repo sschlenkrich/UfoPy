@@ -1,6 +1,6 @@
 [project]
 name = "UfoPy_sschlenkrich"
-version = "0.0.1"
+dynamic = ["version"]
 authors = [
   { name="Sebastian Schlenkrich", email="sebastian.schlenkrich@frame-consult.de" },
 ]
@@ -21,3 +21,6 @@ Issues = "https://github.com/sschlenkrich/UfoPy/issues"
 [build-system]
 requires = ["hatchling >= 1.26"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/UfoPy/__about__.py"
