@@ -17,6 +17,8 @@ In addition we add the following packages (via pip).
 pip install hatch
 pip install --upgrade build
 pip install --upgrade twine
+pip install -U sphinx
+pip install --upgrade myst-parser
 ```
 
 ## Packaging
@@ -63,3 +65,45 @@ import UfoPy
 ```
 
 May throw error due to missing packages because of `--no-deps` option.
+
+Alternatively, install package from local wheel.
+
+```
+pip install .\dist\ufopy_sschlenkrich-0.0.1-py3-none-any.whl
+```
+
+## Documentation
+
+Setup folders and files via
+
+```
+sphinx-quickstart
+```
+
+This generates a template using a root file `index.rst`.
+
+To use Markdown source (instead of RST), we install `myst-parser` do the following adjustments to `conf.py`.
+
+```
+extensions = ['myst_parser']
+```
+
+Remove the `index.rst` file and replace it by Markdown files.
+
+```
+index.md
+some_feature.md
+another_feature.md
+```
+
+Add the github action in `documentation.yml`.
+
+Enable Github Pages in repo settings:
+
+- Deploy from branch.
+- Use gh-pages branch.
+
+On push, `documentation` and `pages-build-deployment` actions should run.
+
+
+[![Documentation](https://img.shields.io/badge/Documentation-dev-blue)](https://sschlenkrich.github.io/UfoPy/)
